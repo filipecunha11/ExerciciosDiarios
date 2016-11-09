@@ -93,8 +93,11 @@ public class ExerciciosTurma {
 		//Apenas para saber quais são os valores da lotaria
 		System.out.println(numLotaria[valorRandom[0]] + ", " + numLotaria[valorRandom[1]] + ", " + numLotaria[valorRandom[2]]);
 		
-		System.out.print("Quanto pretende apostar?  ");
+		do
+		{
+		System.out.println("Quanto pretende apostar? Mínimo 2€  ");
 		valorApostado = (new Scanner(System.in)).nextInt();
+		} while (valorApostado < 2);
 		
 		System.out.println("");
 		System.out.println("Apostou " + valorApostado + "€, poderá ganhar um total de: " + Math.pow(valorApostado,8));

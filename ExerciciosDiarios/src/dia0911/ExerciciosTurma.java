@@ -103,6 +103,7 @@ public class ExerciciosTurma {
 		System.out.println("Apostou " + valorApostado + "€, poderá ganhar um total de: " + Math.pow(valorApostado,8));
 		for (int i = 0; i < 3; i++)
 		{
+			validado = false;
 			do
 			{
 			System.out.print(i+1 + "º numero:  ");

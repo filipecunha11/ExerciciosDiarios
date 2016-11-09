@@ -62,7 +62,7 @@ public class ExerciciosTurma {
 	
 	public void exercicio3()
 	{
-		/* EXERCICIO 3 - Dificuldade III
+		/* EXERCICIO 3 - Dificuldade II
 		 * Crie um array com 50 espaços e preencha-o com os números de 1 a 50
 		 * De seguida, gere 3 números aleatórios que irão corresponder às casas do array com premio
 		 * Pergunte ao utilizador quanto € pretende apostar

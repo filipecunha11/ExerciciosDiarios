@@ -113,7 +113,7 @@ public class ExerciciosTurma {
 			validado = false;
 			do
 			{
-			System.out.print(i+1 + "º numero:  ");
+			System.out.print((i+1) + "º numero:  ");
 			valorUser[i] = (new Scanner(System.in)).nextInt();
 			if (valorUser[i] > 0 && valorUser[i] < 51)
 				validado = true;

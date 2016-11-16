@@ -7,9 +7,9 @@ public class ExerciciosTurma {
 
 	public ExerciciosTurma() {
 		
-		//exercicio1();
+		exercicio1();
 		//exercicio2();
-		exercicio3();
+		//exercicio3();
 		
 	}
 
@@ -27,9 +27,9 @@ public class ExerciciosTurma {
 		{
 			do
 			{
-			System.out.print("Numero " + i+1 + ":	");
+			System.out.print("Numero " + (i+1) + ":	");
 			nums[i] = (new Scanner(System.in)).nextInt();
-			} while (nums[i] <= 0 && nums[i] > 100);
+			} while (nums[i] <= 0 || nums[i] > 100);
 			
 			if (nums[i] > max)
 				max = nums[i];
@@ -47,6 +47,7 @@ public class ExerciciosTurma {
 		 * De seguida, percorra o array e descubra em que casa foi guardado o valor 0 e retorne ao utilizador, tendo
 		 *  em conta que array[0] corresponde à primeira casa.
 		 */
+		 boolean zero = false;
 		 
 		int[] nums = new int [5];
 		System.out.println("Insira 5 valores:");
@@ -56,13 +57,19 @@ public class ExerciciosTurma {
 		
 		for (int i = 0; i < 5; i++)
 			if (nums[i] == 0)
-				System.out.println("O 0 foi inserido na " + i+1 + "ª casa.");
+			{
+				System.out.println("O 0 (zero) foi inserido na " + (i+1) + "ª casa.");
+				zero = true;
+			}
+		
+		if (zero == false)
+			System.out.println("Não foi inserido nenhum 0 (zero).");
 		
 	}
 	
 	public void exercicio3()
 	{
-		/* EXERCICIO 3 - Dificuldade II
+		/* EXERCICIO 3 - Dificuldade III
 		 * Crie um array com 50 espaços e preencha-o com os números de 1 a 50
 		 * De seguida, gere 3 números aleatórios que irão corresponder às casas do array com premio
 		 * Pergunte ao utilizador quanto € pretende apostar
@@ -83,6 +90,7 @@ public class ExerciciosTurma {
 		int[] numLotaria = new int[50];
 		double valorApostado;
 		int nAcertados = 0;
+		boolean validado = false;
 		
 		
 		for (int i = 0; i < 50; i++)
@@ -112,8 +120,6 @@ public class ExerciciosTurma {
 			} while(!validado);
 		}
 		
-		
-		System.out.println("Insira os valores em que pretende apostar (1-50)");
 		for (int i = 0; i < 3; i++)
 		{
 			if (valorUser[i] == numLotaria[valorRandom[i]])
